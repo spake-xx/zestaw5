@@ -1,16 +1,15 @@
-package jakub.ciszewski;
-
 import java.util.Scanner;
 
-public class zad6 {
-    private static int strToInt(String text){
+public class zad8 {
+    private static int wordCount(String text){
         char[] text_arr = text.toCharArray();
+        int liczba_slow = 1;
 
         for(int i=0; i<text_arr.length; i++){
-            if(text_arr[i]>=48 && text_arr[i]<=57){
-
-            }
+            if(Character.isWhitespace(text_arr[i])) liczba_slow++;
         }
+
+        return liczba_slow;
     }
 
     public static void main(String[] args) {
@@ -18,6 +17,6 @@ public class zad6 {
         System.out.println("Podaj łańcuch znaków:");
         String text = reader.nextLine();
 
-        System.out.println(strToInt(text));
+        System.out.println(wordCount(text));
     }
 }

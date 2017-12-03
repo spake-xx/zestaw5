@@ -1,5 +1,3 @@
-package jakub.ciszewski;
-
 import java.util.Scanner;
 
 public class zad5 {
